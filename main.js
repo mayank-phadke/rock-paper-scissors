@@ -73,7 +73,7 @@ function win(userChoice, computerChoice) {
 function lose(userChoice, computerChoice) {
     compScore++
     compScore_span.innerHTML = compScore
-    result_p.innerHTML = `${letterToWord(computerChoice)}${userText} beats ${letterToWord(userChoice)}${compText}. You lose...`
+    result_p.innerHTML = `${letterToWord(computerChoice)}${compText} beats ${letterToWord(userChoice)}${userText}. You lose...`
 
     let div = document.getElementById(userChoice)
     div.classList.add("red-glow")
