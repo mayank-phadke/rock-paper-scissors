@@ -60,7 +60,7 @@ function getComputerChoice() {
 function win(userChoice, computerChoice) {
     userScore++
     userScore_span.innerHTML = userScore
-    result_p.innerHTML = `${letterToWord(userChoice)}${userText} beats ${letterToWord(computerChoice)}${compText}. You win!`
+    result_p.innerHTML = `You Chose : ${letterToWord(userChoice)} <br> Computer Chose : ${letterToWord(computerChoice)}<br> You win!`
 
     let div = document.getElementById(userChoice)
     div.classList.add("green-glow")
@@ -73,7 +73,7 @@ function win(userChoice, computerChoice) {
 function lose(userChoice, computerChoice) {
     compScore++
     compScore_span.innerHTML = compScore
-    result_p.innerHTML = `${letterToWord(computerChoice)}${compText} beats ${letterToWord(userChoice)}${userText}. You lose...`
+    result_p.innerHTML = `You Chose : ${letterToWord(userChoice)} <br> Computer Chose : ${letterToWord(computerChoice)}<br> You lose...`
 
     let div = document.getElementById(userChoice)
     div.classList.add("red-glow")
@@ -83,7 +83,7 @@ function lose(userChoice, computerChoice) {
 }
 
 function draw(choice) {
-    result_p.innerHTML = `${letterToWord(choice)}${userText} equals ${letterToWord(choice)}${compText}. Draw.`
+    result_p.innerHTML = `You Chose : ${letterToWord(choice)} <br> Computer Chose : ${letterToWord(choice)}<br> Draw`
 
     let div = document.getElementById(choice)
     div.classList.add("gray-glow")
